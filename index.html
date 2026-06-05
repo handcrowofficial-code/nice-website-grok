@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সুন্দর ওয়েবসাইট - Grok</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .features {
+            padding: 100px 5%;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 20px;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.25);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Grok Studio</div>
+        <div class="nav-links">
+            <a href="#home">হোম</a>
+            <a href="#features">ফিচার</a>
+            <a href="#about">আমাদের সম্পর্কে</a>
+        </div>
+    </nav>
+
+    <div class="particles"></div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>স্বাগতম সুন্দর জগতে!</h1>
+            <p>একটি আধুনিক ও সুন্দর ওয়েবসাইট যা Grok দ্বারা তৈরি। Responsive, Beautiful & Interactive.</p>
+            <a href="#features" class="btn">আরও জানুন</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">আমাদের ফিচারসমূহ</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🌟 আধুনিক ডিজাইন</h3>
+                <p>Gradient backgrounds, smooth animations এবং modern UI/UX.</p>
+            </div>
+            <div class="card">
+                <h3>📱 Responsive</h3>
+                <p>সব ডিভাইসে perfectly দেখাবে - Mobile, Tablet, Desktop.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Fast & Interactive</h3>
+                <p>Vanilla HTML, CSS, JS দিয়ে তৈরি। কোনো heavy framework নেই।</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Grok by xAI | বাংলায় তৈরি একটি সুন্দর ওয়েবসাইট</p>
+    </footer>
+
+    <script>
+        // Simple particle effect
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '5px';
+            particle.style.height = '5px';
+            particle.style.background = 'rgba(255,255,255,0.7)';
+            particle.style.borderRadius = '50%';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = '-10px';
+            particle.style.opacity = Math.random();
+            document.querySelector('.particles').appendChild(particle);
+            
+            let y = 0;
+            const speed = Math.random() * 3 + 2;
+            
+            function fall() {
+                y += speed;
+                particle.style.transform = `translateY(${y}px)`;
+                if (y < window.innerHeight) {
+                    requestAnimationFrame(fall);
+                } else {
+                    particle.remove();
+                }
+            }
+            fall();
+        }
+        
+        setInterval(() => {
+            for(let i = 0; i < 3; i++) {
+                createParticle();
+            }
+        }, 100);
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
